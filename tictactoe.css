@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: rgb(30, 131, 182);
+}
+
+body{
+    color: var(--orange);
+    font-family: "Finger Paint" cursive;
+}
+
+h1{
+    font-size: 100px;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+.container{ 
+    padding: 50px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+#board{
+    width: 500px;
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 160px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+
+.box:nth-child(6)~.box{
+    border-bottom: none;
+}
+
+button{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: var(--orange);
+    border-color: var(--orange);
+    font-size: 15px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
